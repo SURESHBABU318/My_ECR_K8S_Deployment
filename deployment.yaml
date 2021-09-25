@@ -2,24 +2,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/name: mean-demo
-    app.kubernetes.io/instance: mean-demo-instance
+    app.kubernetes.io/name: mean_eks_demo
+    app.kubernetes.io/instance: mean_eks_demo-instance
     app.kubernetes.io/version: '1.0.0'
     app.kubernetes.io/managed-by: kubectl
-  name: mean-demo-deployment
+  name: mean_eks_demo-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mean-demo
+      app: mean_eks_demo
   template:
     metadata:
       labels:
-        app: mean-demo
+        app: mean_eks_demo
     spec:
       containers:
         - image: <IMAGE URL>
           imagePullPolicy: Always
-          name: mean-demo
+          name: mean_eks_demo
           ports:
             - containerPort: 4040
