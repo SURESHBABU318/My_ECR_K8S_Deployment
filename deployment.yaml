@@ -2,24 +2,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/name: demo_k8s_dep
-    app.kubernetes.io/instance: demo_k8s_dep-instance
+    app.kubernetes.io/name: mean-demo
+    app.kubernetes.io/instance: mean-demo-instance
     app.kubernetes.io/version: '1.0.0'
     app.kubernetes.io/managed-by: kubectl
-  name: demo_k8s_dep-deployment
+  name: mean-demo-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo_k8s_dep
+      app: mean-demo
   template:
     metadata:
       labels:
-        app: demo_k8s_dep
+        app: mean-demo
     spec:
       containers:
-        - image: 038269871983.dkr.ecr.us-east-2.amazonaws.com/demo_k8s_dep
+        - image: <IMAGE URL>
           imagePullPolicy: Always
-          name: demo_k8s_dep
+          name: mean-demo
           ports:
             - containerPort: 4040
