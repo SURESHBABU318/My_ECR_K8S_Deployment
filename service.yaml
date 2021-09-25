@@ -2,15 +2,15 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app.kubernetes.io/name: mean-demo
-    app.kubernetes.io/instance: mean-demo-instance
+    app.kubernetes.io/name: mean_eks_demo
+    app.kubernetes.io/instance: mean_eks_demo-instance
     app.kubernetes.io/version: "1.0.0"
     app.kubernetes.io/component: backend
     app.kubernetes.io/managed-by: kubectl
-  name: mean-demo
+  name: mean_eks_demo
 spec:
   selector:
-    app: mean-demo
+    app: mean_eks_demo
   type: LoadBalancer
   ports:
    -  protocol: TCP
