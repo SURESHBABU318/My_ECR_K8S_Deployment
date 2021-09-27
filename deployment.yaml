@@ -18,8 +18,8 @@ spec:
         app: mean_eks_demo
     spec:
       containers:
-        - image: <IMAGE URL>
+        - image: 038269871983.dkr.ecr.us-east-2.amazonaws.com/mean_eks_demo
           imagePullPolicy: Always
-          name: latest
+          name: mean_eks_demo
           ports:
             - containerPort: 4040
