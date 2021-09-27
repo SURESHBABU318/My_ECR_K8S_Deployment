@@ -20,6 +20,6 @@ spec:
       containers:
         - image: <IMAGE URL>
           imagePullPolicy: Always
-          name: mean_eks_demo
+          name: latest
           ports:
             - containerPort: 4040
